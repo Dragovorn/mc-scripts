@@ -1,18 +1,20 @@
 #!/bin/bash
 
-source ./config.sh
+source config.sh
+#source ./.scripts/functions.sh
+
+#import_config
+
+if [ -z "${SCREEN_NAME+x}" ]; then
+  echo "Could not import config!"
+  exit
+fi
 
 echo "Starting minecraft server"
 echo "Using screen: $SCREEN_NAME"
-
-if [ "$SERVER_LAUNCH_PATH" == "UNSET" ]; then
-  echo "Please provide a server launch path in the config.sh file!"
-  return
-fi
-
-echo "Server launch exec: $SERVER_LAUNCH_PATH"
+echo "Server path: $RUN_DIR"
 echo "Starting daemon..."
-screen -dmS $SCREEN_NAME ./start-server.sh
+screen -dmS $SCREEN_NAME "$RUN_DIR/server-daemon.sh"
 sleep 1s
 echo "Daemon launched."
 

@@ -1,5 +1,3 @@
-SERVER_LAUNCH_PATH="UNSET"
-SCREEN_NAME="minecraft"
 
 function execute_command() {
   if [ -z "$1" ]; then
