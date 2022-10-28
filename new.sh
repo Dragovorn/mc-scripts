@@ -46,7 +46,7 @@ echo "SCREEN_NAME=\"$screen_name\"" >> "$config_file"
 echo "INSTALL_DIR=\"$install_dir\"" >> "$config_file"
 echo "RUN_DIR=\"$run_dir\"" >> "$config_file"
 echo "RUN_SCRIPT=\"$run_script\"" >> "$config_file"
-echo "UPDATE_COMMAND=\"$update_command\"" >> "$config_file"
+echo "UPDATE_COMMAND=\"$update_cmd\"" >> "$config_file"
 
 read -p "Do you agree to Mojang's EULA? (Y/N): " confirm
 
