@@ -23,9 +23,6 @@ install_dir=$(realpath "$install_dir")
 echo "Creating .scripts directory..."
 mkdir -p "$run_dir/.scripts/"
 
-echo "Creating control-panel directory..."
-mkdir -p "$run_dir/control-panel"
-
 link=(
   "start.sh"
   "server-daemon.sh"
